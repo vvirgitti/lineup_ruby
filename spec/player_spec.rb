@@ -22,5 +22,10 @@ describe Player do
     expect(player.positions[0]).to eq ({'position'=> 'First', 'rating' => 3})
   end
 
+  it 'can have a 2nd position' do
+    player = Player.new('Denise', 'Pitch', 5)
+    player.add_position({'position' => 'Outfield', 'rating' => 2})
+    expect(player.positions[1]).to eq ({'position'=> 'Outfield', 'rating' => 2})
+  end
 
 end

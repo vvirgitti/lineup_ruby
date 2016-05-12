@@ -7,4 +7,8 @@ class Player
     @positions = [{'position' => @position = position, 'rating' => @rating = rating}]
   end
 
+  def add_position(new_position)
+    @positions << new_position
+  end
+
 end
