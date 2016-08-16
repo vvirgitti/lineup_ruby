@@ -1,7 +1,6 @@
-
 class Roster
 
-  attr_accessor :players
+  attr_reader :players
 
   def initialize
     @players = []
@@ -18,6 +17,20 @@ class Roster
 
   def player_count
     @players.count
+  end
+
+  def selectPlayer(playerPosition)
+    p 'PLAYERS'
+    p @players
+    p 'PLAYERS POSITION'
+    p playerPosition
+    p 'TRANSFORMATION'
+    p @players.select{|pl| pl == 'pitch'}
+  end
+
+  def selectPosition(position)
+    @positions
+
   end
 
 end

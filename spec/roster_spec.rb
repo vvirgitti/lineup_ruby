@@ -20,4 +20,25 @@ describe Roster do
     expect(roster.players[0].name).to eq('Annie')
   end
 
+  it 'can select a Pitch' do
+    player1 = Player.new('James', 'Catch', 4)
+    player2 = Player.new('Lisa', 'Pitch', 1)
+    player3 = Player.new('Paul', '3rd', 4)
+    player4 = Player.new('Meredith', '1st', 4)
+    player5 = Player.new('Jake', 'Left center', 4)
+    roster.add_player(player1)
+    roster.add_player(player2)
+    roster.add_player(player3)
+    roster.add_player(player4)
+    roster.add_player(player5)
+    p '************'
+     p 'ROSTER'
+     p roster
+     p '************'
+     p 'ROSTER SELECTED'
+     p roster.selectPlayer('pitch')
+    expect(roster.selectPlayer('pitch')).to eq(player2)
+  end
+
+
 end
